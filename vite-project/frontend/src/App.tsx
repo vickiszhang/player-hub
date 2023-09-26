@@ -1,14 +1,21 @@
-
 import './App.css'
+import { createBrowserRouter } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
+import Root from './routes/Root.tsx'
+import ErrorPage from './errors-page.tsx'
 
-function App() {
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    errorElement: <ErrorPage />
+  }
+])
 
+export default function App() {
   return (
     <>
-      <h1>hello</h1>
-        
+      <RouterProvider router={router} />
     </>
   )
 }
-
-export default App
