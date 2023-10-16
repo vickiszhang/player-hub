@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(22, 36, 57);
+} 
+
+.carousel-container{
+    width: 100%;
+}
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+// NAVBAR STYLING
+.sidebar-container{
+    background-color: red;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; 
+    z-index: 10;
+    overflow-x: hidden; /*remove horiz scroll*/
+}
+
+.sidebar a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.left-container{
+
+}
+
+.right-container{
+    
+}
