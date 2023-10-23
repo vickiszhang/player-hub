@@ -1,6 +1,7 @@
 import "./styles.css";
 import "@splidejs/react-splide/css";
 import { Options, Splide, SplideSlide } from "@splidejs/react-splide";
+import PlayerCard from "../PlayerCard/PlayerCard";
 
 const options: Options = {
   perPage: 2,
@@ -8,42 +9,34 @@ const options: Options = {
   pagination: false,
 };
 
-const slides = [
-  {
-    icon: "build",
-    text: "Building robust software solutions.",
-  },
-  {
-    icon: "bug_report",
-    text: "Expert at debugging complex issues.",
-  },
-  {
-    icon: "palette",
-    text: "User interface design and animation.",
-  },
-  {
-    icon: "lock",
-    text: "Implementing secure applications.",
-  },
-  {
-    icon: "dns",
-    text: "Dev ops and web infrastructure.",
-  },
-  {
-    icon: "person",
-    text: "Top-level communication skills.",
-  },
-  {
-    icon: "terminal",
-    text: "Coding advanced web applications.",
-  },
-];
+const testPlayer1 = {
+  name: 'Vikeyna',
+  message: "I'm a trash Neeko main teehee",
+};
+
+const testPlayer2 = {
+  name: 'dvid',
+  message: "I'm a competative aram player teehee",
+};
 
 export const Carousel = () => {
   return (
     <>
       <nav>Users</nav>
-      <div className="wrapper">
+      <Splide aria-label="My Favorite Images">
+        <SplideSlide>
+          <PlayerCard {...testPlayer1}></PlayerCard>
+        </SplideSlide>
+        <SplideSlide>
+          <PlayerCard {...testPlayer2}></PlayerCard>
+        </SplideSlide>
+      </Splide>
+    </>
+  );
+};
+
+
+{/* <div className="wrapper">
         <div className="splide">
           <Splide options={options}>
             {slides.map((slide) => (
@@ -60,7 +53,34 @@ export const Carousel = () => {
             ))}
           </Splide>
         </div>
-      </div>
-    </>
-  );
-};
+      </div> */}
+
+// const slides = [
+//   {
+//     PlayerCard(testPlayer)
+//   },
+//   {
+//     icon: "bug_report",
+//     text: "Expert at debugging complex issues.",
+//   },
+//   {
+//     icon: "palette",
+//     text: "User interface design and animation.",
+//   },
+//   {
+//     icon: "lock",
+//     text: "Implementing secure applications.",
+//   },
+//   {
+//     icon: "dns",
+//     text: "Dev ops and web infrastructure.",
+//   },
+//   {
+//     icon: "person",
+//     text: "Top-level communication skills.",
+//   },
+//   {
+//     icon: "terminal",
+//     text: "Coding advanced web applications.",
+//   },
+// ];
