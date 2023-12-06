@@ -1,6 +1,6 @@
 import './Navbar.css'
 import { useState } from "react"
-export default function Sidebar() {
+export default function Navbar() {
 
     //GOING TO IMPLEMENT HIDING NAVBAR ON DOWNSCROLL (AND DOWNSCROLL + PAUSE)
     // - appear on window open
@@ -16,11 +16,11 @@ export default function Sidebar() {
         <>
             <div className="sidebar-container">
                 <div className='left-container'>
-                    <a id='home'>Home</a>
-                    </div>
+                    <a href={`/`}>Home</a>
+                </div>
                 <div className='right-container'>
-                <a id='connections'>Connections</a>
-                <a id='profile'>Profile</a>
+                    <a href={`/connections`}>Connections</a>
+                    <a href={`/profile`}>Profile</a>
                 </div>
             </div>
         </>

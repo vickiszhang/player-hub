@@ -1,3 +1,5 @@
+import "./PlayerCard.css"
+
 interface PlayerDescription {
     name: string;
     message: string;
@@ -6,9 +8,15 @@ interface PlayerDescription {
 export default function PlayerCard(props: PlayerDescription) {
     return(
         <>
-            <div id="playerCard">
-                <h1 id="playerName">{props.name}</h1>
-                <p id="playerMessage">{props.message}</p>
+            <div id="player-card">
+                <div className="card-left">
+                    <div className="player-profile-pic"></div>
+                    <div className="card-left-info">
+                        <h1 className="player-name">{props.name}</h1>
+                        <p className="player-messge">{props.message}</p>
+                    </div>
+                </div>
+                <div className="card-right"></div>
             </div>
         </>
     )

@@ -1,10 +1,46 @@
-#playerCard {
-    display: flex;
-    width: 50px;
-    height: 50px;
-    background-color: white;
+#player-card {
+  display: flex;
+  width: 40rem;
+  height: 22rem;
+  background-color: #413A4D;
+  border-radius: 20px;
 }
 
-#playerName {
-    font-size: 30px;
+.player-profile-pic {
+  background-color: #8E8E8E;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  margin-top: 20px;
 }
+
+.player-name {
+  font-size: 30px;
+}
+
+.card-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card-left .card-left-info {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  position: relative;
+  left: 0;
+  background-color: red;
+}
+.card-left .card-left-info h1 {
+  color: #ffffff;
+  top: 0;
+  left: 0;
+}
+.card-left .card-left-info p {
+  color: #8E8E8E;
+  position: absolute;
+  top: 0;
+  left: 0;
+}/*# sourceMappingURL=PlayerCard.css.map */
